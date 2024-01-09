@@ -59,7 +59,10 @@ export const DatePickerDay: FunctionalComponent<DatePickerDayProps> = ({
       }}
     >
       <span aria-hidden="true">{day.getDate()}</span>
-      <span class="duet-date__vhidden">{dateFormatter.format(day)}</span>
+      <span class="duet-date__vhidden">
+        {dateFormatter.format(day)}
+        {isSelected ? " - date selected" : ""}
+      </span>
     </button>
   )
 }
